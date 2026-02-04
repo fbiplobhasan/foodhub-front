@@ -3,7 +3,7 @@ import { NextRequest } from "next/server";
 import { userService } from "./services/user.service";
 import { Roles } from "./constants/roles";
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   const { data } = await userService.getSession();
